@@ -1,2 +1,4 @@
 fijarse que la ruta de ejecucion del servidor (npx vite), sea  dentro del directorio primer_entrega. 
 ejemplo: (PS C:\Users\Ivan\Documents\GitHub\integrador_desarrollo_web\primer_entrega>).
+
+Agregar fuente nueva al proyecto.
