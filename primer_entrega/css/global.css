@@ -40,6 +40,14 @@ body {
     margin: 0 auto;
 }
 
+h1,p,a {
+    font-family: "Chewy", sans-serif;
+}
+
+img {
+  width: 4rem;
+  height: auto;
+}
 header {
 
 }
@@ -65,5 +73,7 @@ header a {
 
 footer{
     background-color: var(--color-primary);
-
+    padding: 2rem;
+    color: var(--color-text-light);
+    text-align: center;
 }
