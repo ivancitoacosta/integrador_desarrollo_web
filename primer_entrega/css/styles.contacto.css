@@ -12,25 +12,77 @@ h1,p,a {
 
 .contacto{
     display: flex;
-    flex-direction: column;
+    padding: 4rem 0;
     align-items: center;
-    
+    justify-content: space-between;
 }
 
-.formulario_contacto{
+.formulario_contacto {
+    width: 48%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+}
+.formulario_contacto form {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    
+}
+.formulario_contacto form h2 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--color-text);
+}
+.formulario_contacto form label input,
+.formulario_contacto form label textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+    border: 1px solid var(--color-secondary-light);
+    border-radius: 0.5rem;
+}
+.formulario_contacto form input::placeholder,
+.formulario_contacto form textarea::placeholder {
+    color: var(--color-text-secondary);
+}
+.formulario_contacto form button {
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    color: var(--color-text-light);
+    background-color: var(--color-secondary-light);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
-.mensaje{
+/*.mensaje{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    
+
+}*/
+
+.divider {
+    width: 2px;
+    height: 300px;
+    margin: 0 6rem;
+    background-color: var(--color-secondary-light);
+
+}
+
+.ubicacion {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

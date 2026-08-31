@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
     /* BRAND */
     --color-primary: #2A9D8F;
@@ -68,7 +71,14 @@ header li {
 header a {
     color: var(--color-text-light);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease;
+}
+header a:hover {
+    color: var(--color-text);
+
 }
 
 footer{

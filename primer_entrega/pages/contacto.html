@@ -11,6 +11,7 @@
 <body>
     <header>
         <nav>
+            <div><img src="../assets/images/icono_logo.png" alt="Logo"></div>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../pages/info_ins.html">Nosotros</a></li>
@@ -20,29 +21,37 @@
         </nav>
     </header>
     <main class="contacto">
-        <section class="titulo_formulario">
+        <!--CONTACTO-->
+        <section class="formulario_contacto">
+            <form >
             <h2>Escribinos</h2>
+                <label>
+                    Nombre
+                    <input type="text" placeholder="Tu nombre">
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" placeholder="tuemail@email.com">
+                </label>
+
+                <label class="mensaje">
+                    Mensaje
+                    <textarea rows="5" placeholder="Dejanos tu mensaje..."></textarea>
+                </label>
+
+                <button type="button">Enviar</button>
+            </form>
         </section>
 
-        <form class="formulario_contacto">
-            <label>
-                Nombre
-                <input type="text" placeholder="Tu nombre">
-        </label>
+        <div class="divider"></div>
 
-        <label>
-            Email
-            <input type="email" placeholder="tuemail@email.com">
-        </label>
+        <!--UBICACION-->
+        <section class="ubicacion">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54500.63118410028!2d-58.08282093706933!3d-31.378581515252105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade8093e560701%3A0x5d1d34b223a6f091!2sConcordia%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1788193425801!5m2!1ses-419!2sar" width="500" height="400" style="border:0; border-radius:1rem;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
 
-        <label class="mensaje">
-            Mensaje
-            <textarea rows="5" placeholder="Dejanos tu mensaje..."></textarea>
-        </label>
 
-        <button type="button">Enviar</button>
-    </form>
-</section>
     </main>
     <footer>
         <p>&copy; 2026 - Todos los derechos reservados</p>
