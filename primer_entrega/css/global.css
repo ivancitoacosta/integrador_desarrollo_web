@@ -42,10 +42,12 @@ body {
     margin: 0 auto;
 }
 
-img {
-  width: 4rem;
-  height: auto;
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
 }
+
+/*HEADER*/
 header nav{
     display: flex;
     background-color: var(--color-primary);
@@ -56,15 +58,14 @@ header nav{
     align-items: center;
     justify-content: space-between;
 }
-.nav_header {
+header nav a {
     display: flex;
     align-items: center;
     gap: 0.8rem;
 }
-.nav_header h1 {
-    font-family: "Sora", sans-serif;
-    color: var(--color-text-light);
-    letter-spacing: 0.1rem;
+header nav a img {
+    width: 4rem;
+    height: auto;
 }
 header li {
     display: inline-block;
@@ -83,6 +84,7 @@ header a:hover {
     color: var(--color-text);
 }
 
+/*FOOTER*/
 footer{
     background-color: var(--color-primary);
     padding: 2rem;
