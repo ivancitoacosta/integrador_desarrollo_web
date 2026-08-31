@@ -80,7 +80,7 @@ header a {
     letter-spacing: 0.1rem;
     transition: color 0.3s ease;
 }
-header a:hover {
+header ul li a:hover {
     color: var(--color-text);
 }
 
