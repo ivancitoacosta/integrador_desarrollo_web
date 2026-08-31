@@ -1,0 +1,14 @@
+@import url('global.css');
+
+.inicio {
+    display: flex;
+    height: 100vh;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-image: url("../assets/images/index_slide.avif");
+    background-size: cover;
+    background-position: center;
+    color: var(--color-text-light);
+}
