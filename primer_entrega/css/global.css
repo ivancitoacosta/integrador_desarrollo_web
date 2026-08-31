@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
 :root {
     /* BRAND */
     --color-primary: #2A9D8F;
@@ -40,16 +42,9 @@ body {
     margin: 0 auto;
 }
 
-h1,p,a {
-    font-family: "Chewy", sans-serif;
-}
-
 img {
   width: 4rem;
   height: auto;
-}
-header {
-
 }
 header nav{
     display: flex;
@@ -61,6 +56,16 @@ header nav{
     align-items: center;
     justify-content: space-between;
 }
+.nav_header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+.nav_header h1 {
+    font-family: "Sora", sans-serif;
+    color: var(--color-text-light);
+    letter-spacing: 0.1rem;
+}
 header li {
     display: inline-block;
     margin: 0 0.3rem;
@@ -68,7 +73,14 @@ header li {
 header a {
     color: var(--color-text-light);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-family: "Sora", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease;
+}
+header a:hover {
+    color: var(--color-text);
 }
 
 footer{
