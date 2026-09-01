@@ -18,6 +18,7 @@ h1,p,a {
 }
 
 .formulario_contacto {
+    margin-top: 6rem;
     width: 48%;
     display: flex;
     flex-direction: column;
@@ -62,6 +63,7 @@ h1,p,a {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 500;
+    
 }
 
 /*.mensaje{
@@ -73,14 +75,14 @@ h1,p,a {
 }*/
 
 .divider {
-    width: 2px;
-    height: 300px;
-    margin: 0 6rem;
-    background-color: var(--color-secondary-light);
-
+  width: 2px;
+  height: 300px;
+  margin: 10rem 6rem 0;
+  background-color: var(--color-secondary-light);
 }
 
 .ubicacion {
+    margin-top: 8rem;
     width: 48%;
     display: flex;
     flex-direction: column;
