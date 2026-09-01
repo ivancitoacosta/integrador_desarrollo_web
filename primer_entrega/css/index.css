@@ -12,3 +12,8 @@
     background-position: center;
     color: var(--color-text-light);
 }
+
+.inicio {
+    font-family: "Lora", sans-serif;
+    font-size: 2rem;
+}
