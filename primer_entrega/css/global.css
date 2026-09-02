@@ -1,100 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
 
 :root {
-    /* BRAND */
-    --color-primary: #2A9D8F;
-    --color-primary-dark: #217A70;
-    --color-primary-light: #72C9BE;
+  /* BRAND */
+  --color-primary: #2a9d8f;
+  --color-primary-dark: #217a70;
+  --color-primary-light: #72c9be;
 
-    /* SECONDARY */
-    --color-secondary: #264653;
-    --color-secondary-light: #3D6875;
+  /* SECONDARY */
+  --color-secondary: #264653;
+  --color-secondary-light: #3d6875;
 
-    /* ACCENT */
-    --color-accent: #F4A261;
-    --color-accent-dark: #E76F51;
+  /* ACCENT */
+  --color-accent: #f4a261;
+  --color-accent-dark: #e76f51;
 
-    /* BACKGROUNDS */
-    --color-background: #F8F9F7;
-    --color-background-soft: #EEF7F5;
-    --color-surface: #FFFFFF;
+  /* BACKGROUNDS */
+  --color-background: #f8f9f7;
+  --color-background-soft: #eef7f5;
+  --color-surface: #ffffff;
 
-    /* TEXT */
-    --color-text: #264653;
-    --color-text-secondary: #5F6F73;
-    --color-text-muted: #89979A;
-    --color-text-light: #FFFFFF;
+  /* TEXT */
+  --color-text: #264653;
+  --color-text-secondary: #5f6f73;
+  --color-text-muted: #89979a;
+  --color-text-light: #ffffff;
 
-    /* BORDERS */
-    --color-border: #DCE7E5;
-    --color-border-light: #EAF0EF;
+  /* BORDERS */
+  --color-border: #dce7e5;
+  --color-border-light: #eaf0ef;
 
-    /* STATES */
-    --color-success: #4CAF7D;
-    --color-warning: #F4A261;
-    --color-error: #E76F51;
-    --color-info: #4A90A4;
+  /* STATES */
+  --color-success: #4caf7d;
+  --color-warning: #f4a261;
+  --color-error: #e76f51;
+  --color-info: #4a90a4;
 }
 
 body {
-    background-color: var(--color-background);
-    max-width: 1800px;
-    margin: 0 auto;
+  background-color: var(--color-background);
+  position: relative;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 600;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* FORMATEO DE CONTENIDO */
+.container {
+  max-width: 1900px;
+  margin: 0 auto;
 }
 
 /*HEADER*/
 header {
-    width: 100%;
-position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-header nav{
-    display: flex;
-    background-color: var(--color-primary);
-    height: 5rem;
-    margin: 1rem;
-    padding: 1rem 3rem;
-    border-radius: 5rem;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 16px;
+header nav {
+  display: flex;
+  background-color: var(--color-primary);
+  height: 5rem;
+  margin: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 16px;
 }
 header nav a {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 header nav a img {
-    width: 4rem;
-    height: auto;
+  width: 4rem;
+  height: auto;
 }
 header li {
-    display: inline-block;
-    margin: 0 0.3rem;
+  display: inline-block;
+  margin: 0 0.3rem;
 }
 header a {
-    color: var(--color-text-light);
-    text-decoration: none;
-    font-family: "Sora", sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.1rem;
-    transition: color 0.3s ease;
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  transition: color 0.3s ease;
 }
 header ul li a:hover {
-    color: var(--color-text);
+  color: var(--color-text);
 }
 
 /*FOOTER*/
-footer{
-    background-color: var(--color-primary);
-    padding: 2rem;
-    color: var(--color-text-light);
-    text-align: center;
+footer {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  height: 10vh; /*TODO: Cambiar cuando se agreguen mas secciones */
+  padding: 1rem 3rem;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+footer section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem 5rem;
+
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(0.8rem, calc(0.8rem + 0.8vw), 1rem);
+  font-weight: 500;
+  text-align: center;
+  border-radius: 5rem;
 }
