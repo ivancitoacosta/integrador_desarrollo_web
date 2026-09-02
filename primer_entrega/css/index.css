@@ -1,19 +1,77 @@
-@import url('global.css');
+@import url("global.css");
 
 .inicio {
-    display: flex;
-    height: 100vh;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background-image: url("../assets/images/index_slide.avif");
-    background-size: cover;
-    background-position: center;
-    color: var(--color-text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 90vh; /*TODO: Cambiar cuando se agreguen mas secciones */
+  padding: 2rem;
+  background-image: url("../assets/images/index_slide.avif");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-light);
+
+  font-family: "Playfair Display", sans-serif;
 }
 
-.inicio {
-    font-family: "Lora", sans-serif;
-    font-size: 2rem;
+.inicio h2 {
+  font-size: clamp(2rem, 1rem + 3vw, 6rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.inicio p {
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, calc(0.8rem + 0.8vw), 1.4rem);
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+.boton-1 {
+  width: 300px;
+  height: 60px;
+  border: 3px solid var(--color-background);
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: var(--color-background);
+  color: var(--color-primary-dark);
+  font-size: 1.2em;
+  font-weight: 550;
+  transition: all 0.3s ease-in-out;
+}
+.boton-1:hover {
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  color: var(--color-background);
+  font-size: 1.5em;
+}
+
+.boton-2 {
+  width: 300px;
+  height: 60px;
+  border: 3px solid var(--color-background);
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: var(--color-primary-dark);
+  color: var(--color-background);
+  font-size: 1.2em;
+  font-weight: 550;
+  transition: all 0.3s ease-in-out;
+}
+.boton-2:hover {
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  color: var(--color-background);
+  font-size: 1.5em;
 }
