@@ -48,21 +48,17 @@ h1 {
 
 /* FORMATEO DE CONTENIDO */
 .container {
-  max-width: 1900px;
-  margin: 0 auto;
-}
-
-header nav h1 {
-  font-family: "Roboto", sans-serif;
-}
-
-/* FORMATEO DE CONTENIDO */
-.container {
-  max-width: 1900px;
-  margin: 0 auto;
+  width: min(
+    100% - 2rem,
+    1900px
+  ); /* Si la pantalla es mas chica de 1900px agrega unos margener de 1rem a cada lado, si es mayor toma 1900px*/
+  margin-inline: auto;
 }
 
 /*HEADER*/
+header nav h1 {
+  font-family: "Roboto", sans-serif;
+}
 header {
   position: fixed;
   top: 0;
