@@ -6,7 +6,9 @@
     font-weight: 400;
     font-style: normal;
 }
-h1,p,a {
+.contacto h1,
+.contacto p,
+.contacto a {
     font-family: "Chewy", sans-serif;
 }
 

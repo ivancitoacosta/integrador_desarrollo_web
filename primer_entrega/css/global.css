@@ -52,6 +52,16 @@ h1 {
   margin: 0 auto;
 }
 
+header nav h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+/* FORMATEO DE CONTENIDO */
+.container {
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
 /*HEADER*/
 header {
   position: fixed;
@@ -96,6 +106,26 @@ header a {
 }
 header ul li a:hover {
   color: var(--color-text);
+}
+
+@media (max-width: 800px) {
+  header nav {
+    height: auto;
+    padding: 1rem 1.5rem;
+  }
+
+  header nav .nav_header h1 {
+    display: none;
+  }
+
+  header li {
+    margin: 0 0.15rem;
+  }
+
+  header a {
+    font-size: 0.8rem;
+    letter-spacing: 0.04rem;
+  }
 }
 
 /*FOOTER*/
