@@ -3,29 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institucion</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/institucional.css">
+    <title>Institucional | Veterinaria la Mary</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/institucional.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="/index.html" class="nav_header">
-                <img src="../assets/images/icono_logo.png" alt="Logo">
-                <h1>Veterinaria la mary</h1>
+            <a href="../index.html" class="nav_header">
+                <img src="../assets/images/icono_logo.png" alt="Logo de Veterinaria la Mary">
+                <h1>Veterinaria la Mary</h1>
             </a>
             <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="../pages/institucional.html">INSTITUCION</a></li>
-                <li><a href="#">SERVICIOS</a></li>
-                <li><a href="../pages/contacto.html">CONTACTO</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="institucional.html" aria-current="page">Institucional</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <h2>Institucional</h2>
+        <p class="bajada">Conocé nuestra historia, nuestros valores y todo lo que hacemos por tus mascotas.</p>
 
+        <section id="historia">
+            <h3>Nuestra historia</h3>
+            <p>Veterinaria la Mary nació en 2010 como un pequeño consultorio de barrio, con el objetivo de brindar
+            atención cercana y de confianza a las familias y sus mascotas. Con el tiempo fuimos sumando
+            profesionales, equipamiento y especialidades, hasta convertirnos en un centro veterinario integral
+            que hoy atiende a cientos de pacientes cada mes.</p>
+        </section>
+
+        <section id="mision-vision">
+            <div class="card-valor">
+                <h3>Misión</h3>
+                <p>Brindar atención veterinaria integral, accesible y de calidad, priorizando el bienestar animal
+                y acompañando a cada familia con información clara y trato humano.</p>
+            </div>
+            <div class="card-valor">
+                <h3>Visión</h3>
+                <p>Ser la veterinaria de referencia de la zona, reconocida por la calidez de su equipo, la
+                actualización profesional constante y el compromiso con la salud animal.</p>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <h3>Nuestros servicios</h3>
+            <ul class="lista-servicios">
+                <li class="tarjeta-servicio">
+                    <h4>Consulta general</h4>
+                    <p>Chequeos de rutina, diagnóstico y seguimiento de la salud de tu mascota.</p>
+                </li>
+                <li class="tarjeta-servicio">
+                    <h4>Vacunación y desparasitación</h4>
+                    <p>Planes de vacunación al día según especie, edad y calendario sanitario.</p>
+                </li>
+                <li class="tarjeta-servicio">
+                    <h4>Cirugías</h4>
+                    <p>Cirugías programadas y de urgencia, con seguimiento post-operatorio.</p>
+                </li>
+                <li class="tarjeta-servicio">
+                    <h4>Internación</h4>
+                    <p>Cuidado y monitoreo de pacientes que requieren observación permanente.</p>
+                </li>
+                <li class="tarjeta-servicio">
+                    <h4>Peluquería y estética</h4>
+                    <p>Baño, corte e higiene general para que tu mascota luzca y se sienta mejor.</p>
+                </li>
+            </ul>
+            <a class="boton-cta" href="contacto.html">¿Tenés dudas? Contactanos</a>
+        </section>
     </main>
     <footer>
         <p>&copy; 2026 - Todos los derechos reservados</p>
