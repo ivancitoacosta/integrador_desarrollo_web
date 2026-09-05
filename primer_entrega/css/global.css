@@ -192,3 +192,23 @@ footer {
   padding: 0rem 0;
   text-align: center;
 }
+
+@media (max-width: 700px) {
+  .container_links {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .enlaces_rapidos {
+    text-align: center;
+  }
+
+  .enlaces_rapidos > p {
+    margin-bottom: 1rem;
+  }
+
+  .footer_ubicacion {
+    gap: 0.5rem;
+  }
+}
