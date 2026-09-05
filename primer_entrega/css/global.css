@@ -168,6 +168,7 @@ footer {
 
 .enlaces_rapidos {
   text-align: left;
+  transform: translateY(1rem);
 }
 
 .enlaces_rapidos > p {
@@ -177,7 +178,8 @@ footer {
 .redes_sociales {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
+  gap: 1rem;
+  transform: translateY(1rem);
 }
 
 .redes_sociales ul {
@@ -202,6 +204,11 @@ footer {
 
   .enlaces_rapidos {
     text-align: center;
+    transform: none;
+  }
+
+  .redes_sociales {
+    transform: none;
   }
 
   .enlaces_rapidos > p {
