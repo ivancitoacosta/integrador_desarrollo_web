@@ -131,22 +131,13 @@ footer {
   padding: 0rem 0;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  
 }
 
-.container_links {
+footer > .container {
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
   align-items: center;
-  gap: 2rem;
   padding: 1rem 0;
-
-}
-
-.container_links img {
-  color: var(--color-text-light);
-  width: 1rem;
-  height: auto;
 }
 
 .footer_ubicacion {
@@ -155,7 +146,6 @@ footer {
   align-items: center;
   gap: 0.75rem;
 }
-
 .footer_ubicacion .logo_footer {
   width: 4rem;
 }
@@ -165,14 +155,12 @@ footer {
   justify-content: center;
   gap: 1rem;
 }
-
 .enlaces_rapidos {
   text-align: left;
   transform: translateY(1rem);
 }
-
 .enlaces_rapidos > p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .redes_sociales {
@@ -181,12 +169,16 @@ footer {
   gap: 1rem;
   transform: translateY(1rem);
 }
-
 .redes_sociales ul {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
+.redes_sociales img {
+  width: 1.5rem;
+  height: auto;
+}
+
 .container_copy {
   background-color: var(--color-primary-dark);
   color: var(--color-text-dark);
