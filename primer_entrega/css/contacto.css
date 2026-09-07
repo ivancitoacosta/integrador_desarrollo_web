@@ -1,5 +1,13 @@
 @import url("global.css");
 
+body {
+  background-image: url("../assets/images/fondo-institucional.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 @font-face {
   font-family: "Chewy";
   src: url("../fonts/Chewy-Regular.ttf") format("truetype");
