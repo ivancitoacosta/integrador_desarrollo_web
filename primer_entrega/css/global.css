@@ -162,14 +162,12 @@ footer {
   padding: 0rem 0;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  
 }
 
-.container_links {
+footer > .container {
   display: grid;
   grid-template-columns: 3fr 1fr 3fr;
   align-items: center;
-  gap: 2rem;
   padding: 1rem 0;
 
 }
@@ -187,7 +185,6 @@ footer {
   align-items: center;
   gap: 0.4rem;
 }
-
 .footer_ubicacion .logo_footer {
   width: 3rem;
 }
@@ -202,12 +199,10 @@ footer {
   justify-content: center;
   gap: 1rem;
 }
-
 .enlaces_rapidos {
   text-align: left;
   transform: translateY(1rem);
 }
-
 .enlaces_rapidos > p {
   margin-bottom: 0.5rem;
   font-weight: 600;;
