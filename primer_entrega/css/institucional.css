@@ -1,5 +1,6 @@
 @import url('global.css');
 
+
 main {
     width: calc(100% - 2rem);
     max-width: 1140px;
@@ -9,14 +10,16 @@ main {
     margin-top: 2rem;
 }
 
-main .bajada {
-    color: var(--color-text-secondary);
-    margin-bottom: 2rem;
-}
-
 main h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
     color: var(--color-secondary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+main .bajada {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
 }
 
 #historia p {
