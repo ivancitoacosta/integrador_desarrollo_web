@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Bootstrap -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/contacto.css" />
@@ -14,37 +15,67 @@
     <title>Contacto</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <nav>
-          <a href="../index.html" class="nav_header">
+    <!-- HEADER BOOTSTRAP -->
+    <header class="container-content position-fixed top-0 start-0 end-0">
+      <nav class="navbar navbar-expand-lg rounded-5 mt-3 py-3 px-4">
+        <div class="container-fluid">
+          <a
+            href="index.html"
+            class="nav_header d-flex align-items-center gap-2"
+          >
             <img
               src="../assets/images/icono_logo.png"
               alt="Logo de Veterinaria la Mary"
             />
-            <div class="text-logo">
-              <h1>LA MARY</h1>
-              <p>Veterinaria</p>
+            <div
+              class="text-logo d-flex flex-column justify-content-center gap-1"
+            >
+              <h1 class="fs-4 fw-medium lh-1 m-0">LA MARY</h1>
+              <p class="fs-6 fw-normal text-uppercase lh-1 m-0">Veterinaria</p>
             </div>
           </a>
-          <ul>
-            <li><a href="../index.html" title="inicio">INICIO</a></li>
-            <li>
-              <a href="institucional.html" title="institucion">INSTITUCION</a>
-            </li>
-            <li>
-              <a href="institucional.html#servicios" title="servicio"
-                >SERVICIOS</a
-              >
-            </li>
-            <li>
-              <a href="contacto.html" title="contacto" aria-current="page"
-                >CONTACTO</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav text-ul ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html" title="inicio"
+                  >INICIO</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./institucional.html"
+                  title="institucion"
+                  >INSTITUCION</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" title="servicio">SERVICIOS</a>
+              </li>
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  href="./contacto.html"
+                  title="contacto"
+                  aria-current="page"
+                  >CONTACTO</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main class="contacto">
@@ -127,5 +158,8 @@
         </section>
       </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
