@@ -56,6 +56,9 @@ h1 {
 }
 
 /*HEADER*/
+header {
+  z-index: 99;
+}
 
 header nav {
   background-color: var(--color-primary);
