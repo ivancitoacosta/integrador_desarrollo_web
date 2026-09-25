@@ -17,10 +17,12 @@
   <body>
     <!-- HEADER BOOTSTRAP -->
     <header class="container-content position-fixed top-0 start-0 end-0">
-      <nav class="navbar navbar-expand-lg rounded-5 mt-3 py-3 px-4">
+      <nav
+        class="navbar navbar-expand-lg rounded-5 mt-3 py-2 px-1 py-md-3 px-md-4"
+      >
         <div class="container-fluid">
           <a
-            href="index.html"
+            href="./index.html"
             class="nav_header d-flex align-items-center gap-2"
           >
             <img
@@ -30,8 +32,8 @@
             <div
               class="text-logo d-flex flex-column justify-content-center gap-1"
             >
-              <h1 class="fs-4 fw-medium lh-1 m-0">LA MARY</h1>
-              <p class="fs-6 fw-normal text-uppercase lh-1 m-0">Veterinaria</p>
+              <h1 class="fw-medium lh-1 m-0">LA MARY</h1>
+              <p class="fw-normal text-uppercase lh-1 m-0">Veterinaria</p>
             </div>
           </a>
           <button
@@ -60,15 +62,15 @@
                   >INSTITUCION</a
                 >
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="#" title="servicio">SERVICIOS</a>
-              </li>
-              <li class="nav-item active">
+              </li> -->
+              <li class="nav-item">
                 <a
-                  class="nav-link"
+                  class="nav-link active"
+                  aria-current="page"
                   href="./contacto.html"
                   title="contacto"
-                  aria-current="page"
                   >CONTACTO</a
                 >
               </li>
@@ -122,37 +124,46 @@
 
     <!-- FOOTER  -->
     <footer>
-      <div class="container">
-        <section class="footer_ubicacion">
+      <div
+        class="container-content row row-cols-1 py-4 gap-4 row-cols-lg-3 gap-lg-0"
+      >
+        <section
+          class="footer_ubicacion col d-flex flex-column justify-content-center align-items-center gap-0"
+        >
           <img
             class="logo_footer"
-            src="../assets/images/icono_logo.png"
+            src="assets/images/icono_logo.png"
             alt="Veterinaria la Mary"
           />
-          <p>Veterinaria la mary</p>
+          <p class="mt-2">Veterinaria la mary</p>
           <p>Direccion: Calle falsa 123, Ciudad</p>
         </section>
-        <section class="enlaces_rapidos">
-          <p>Enlaces rápidos</p>
-          <ul>
+
+        <section
+          class="enlaces_rapidos col d-flex flex-column justify-content-center align-items-center gap-2"
+        >
+          <p class="">Enlaces rápidos</p>
+          <ul class="d-flex gap-3">
             <li><a href="../index.html">INICIO</a></li>
-            <li><a href="institucional.html">INSTITUCION</a></li>
-            <li><a href="#" title="servicio">SERVICIOS</a></li>
-            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="./institucional.html">INSTITUCION</a></li>
+            <!-- <li><a href="/#" title="servicio">SERVICIOS</a></li> -->
+            <li><a href="./contacto.html">CONTACTO</a></li>
           </ul>
         </section>
-        <section class="redes_sociales">
+
+        <section
+          class="redes_sociales col d-flex flex-column justify-content-center align-items-center gap-2"
+        >
           <p>Nuestras Redes Sociales</p>
-          <ul>
-            <li><img src="../assets/images/whatsapp.png" alt="WhatsApp" /></li>
-            <li>
-              <img src="../assets/images/instagram.png" alt="Instagram" />
-            </li>
-            <li><img src="../assets/images/facebook.png" alt="Facebook" /></li>
+          <ul class="d-flex gap-3">
+            <li><img src="assets/images/whatsapp.png" alt="WhatsApp" /></li>
+            <li><img src="assets/images/instagram.png" alt="Instagram" /></li>
+            <li><img src="assets/images/facebook.png" alt="Facebook" /></li>
           </ul>
         </section>
       </div>
-      <div class="container_copy">
+
+      <div class="container_copy py-3 text-center">
         <section>
           <p>&copy; 2026 Todos los derechos reservados.</p>
         </section>
