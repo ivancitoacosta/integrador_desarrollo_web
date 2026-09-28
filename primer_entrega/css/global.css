@@ -51,7 +51,7 @@ h1 {
   width: min(
     100% - 2rem,
     2000px
-  ); /* Si la pantalla es mas chica de 1900px agrega unos margener de 1rem a cada lado, si es mayor toma 1900px*/
+  ); /* Si la pantalla es mas chica de 2000px agrega unos margener de 1rem a cada lado, si es mayor toma 2000px*/
   margin-inline: auto;
 }
 

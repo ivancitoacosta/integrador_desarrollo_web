@@ -80,45 +80,77 @@
       </nav>
     </header>
 
+    <!--CONTACTO-->
+
     <main class="contacto">
-      <!--CONTACTO-->
       <section class="container">
-        <section class="formulario_contacto">
-          <form>
-            <h2>Escribinos</h2>
-            <label>
-              Nombre
-              <input type="text" placeholder="Tu nombre" />
-            </label>
+        <!-- bootstrap con separacion g-4-->
+        <div class="row g-4 align-items-center justify-content-between">
+          <!-- columna 1-->
+          <div class="col-12 col-lg-5">
+            <section class="formulario_contacto">
+              <form action="#" method="POST">
+                <h2>Escribinos</h2>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="form-control"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >Dirección de correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="tuemail@email.com"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    class="form-control"
+                    placeholder="Dejanos tu mensaje..."
+                    required
+                  ></textarea>
+                </div>
 
-            <label>
-              Email
-              <input type="email" placeholder="tuemail@email.com" />
-            </label>
-
-            <label class="mensaje">
-              Mensaje
-              <textarea rows="5" placeholder="Dejanos tu mensaje..."></textarea>
-            </label>
-
-            <button type="button">Enviar</button>
-          </form>
-        </section>
-
-        <div class="divider"></div>
-
-        <!--UBICACION-->
-        <section class="ubicacion">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54500.63118410028!2d-58.08282093706933!3d-31.378581515252105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade8093e560701%3A0x5d1d34b223a6f091!2sConcordia%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1788193425801!5m2!1ses-419!2sar"
-            width="500"
-            height="400"
-            style="border: 0; border-radius: 1rem"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-          ></iframe>
-        </section>
+                <button type="submit" class="btn-enviar w-100">Enviar</button>
+              </form>
+            </section>
+          </div>
+          <!--visible en pantalla grandes-->
+          <div class="col-lg-1 d-none d-lg-flex justify-content-center">
+            <div class="divider"></div>
+          </div>
+          <!--columna 2: UBICACION-->
+          <div class="col-12 col-lg-6">
+            <section class="ubicacion">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54500.63118410028!2d-58.08282093706933!3d-31.378581515252105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade8093e560701%3A0x5d1d34b223a6f091!2sConcordia%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1788193425801!5m2!1ses-419!2sar"
+                width="100%"
+                height="400"
+                style="border: 0; border-radius: 1rem"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Ubicación Veterinaria La Mary"
+              ></iframe>
+            </section>
+          </div>
+        </div>
       </section>
     </main>
 
