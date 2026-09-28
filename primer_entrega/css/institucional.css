@@ -9,12 +9,8 @@ body {
 }
 
 main {
-  width: calc(100% - 2rem);
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 7rem 0 3rem;
+  padding: 0 0 3rem;
   font-family: "Roboto", sans-serif;
-  margin-top: 2rem;
 }
 
 main h2 {
@@ -121,11 +117,6 @@ main .bajada {
 }
 
 @media (max-width: 800px) {
-  main {
-    max-width: 600px;
-    padding: 7rem 0 3rem;
-  }
-
   #mision-vision,
   .lista-servicios {
     grid-template-columns: 1fr;
@@ -192,6 +183,7 @@ main .bajada {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 8px;
+  padding: 0;
 }
 
 .tarjeta-servicio .card-img-top {
