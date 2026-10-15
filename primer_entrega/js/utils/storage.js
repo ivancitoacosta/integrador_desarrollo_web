@@ -1,3 +1,6 @@
+// TEST
+import { generarId } from "./helpers.js";
+
 // ==== CODIGO ====
 
 /**
@@ -5,7 +8,7 @@
  * @param {*} key  - key del localStorage
  * @param {*} arr  - arreglo con los datos
  */
-function setLocalStorage(key, arr) {
+export function setLocalStorage(key, arr) {
   localStorage.setItem(key, JSON.stringify(arr));
 }
 
@@ -13,7 +16,7 @@ function setLocalStorage(key, arr) {
  *
  * @param {*} key  - key del localStorage
  */
-function getLocalStorage(key) {
+export function getLocalStorage(key) {
   const data = JSON.parse(localStorage.getItem(key));
   return data;
 }
@@ -21,7 +24,7 @@ function getLocalStorage(key) {
 
 // TEST
 const mascotaNueva = {
-  id: crypto.randomUUID(),
+  id: generarId(),
   duenio: "Messi",
   nombre: "Perro1",
   color: "Negro",
@@ -29,7 +32,7 @@ const mascotaNueva = {
   peso: 30,
 };
 const mascotaNueva2 = {
-  id: crypto.randomUUID(),
+  id: generarId(),
   duenio: "Scaloni",
   nombre: "Perro2",
   color: "Blanco",
@@ -38,7 +41,7 @@ const mascotaNueva2 = {
 };
 
 const veterinarioNueva = {
-  id: crypto.randomUUID(),
+  id: generarId(),
   duenio: "Aimar",
   nombre: "Veterinario1",
   color: "Negro",
@@ -46,7 +49,7 @@ const veterinarioNueva = {
   peso: 30,
 };
 const veterinarioNueva2 = {
-  id: crypto.randomUUID(),
+  id: generarId(),
   duenio: "Samuel",
   nombre: "Veterinario2",
   color: "Blanco",
