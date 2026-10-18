@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/mascotas.css" />
+
+    <title>Mascotas | Veterinaria La Mary</title>
+  </head>
+
+  <body>
+    <!-- HEADER BOOTSTRAP -->
+    <header class="container-content position-fixed top-0 start-0 end-0">
+      <nav
+        class="navbar navbar-expand-lg rounded-5 mt-3 py-2 px-1 py-md-3 px-md-4"
+      >
+        <div class="container-fluid">
+          <a
+            href="../index.html"
+            class="nav_header d-flex align-items-center gap-2"
+          >
+            <img
+              src="../assets/images/icono_logo.png"
+              alt="Logo de Veterinaria la Mary"
+            />
+            <div
+              class="text-logo d-flex flex-column justify-content-center gap-1"
+            >
+              <h1 class="fw-medium lh-1 m-0">LA MARY</h1>
+              <p class="fw-normal text-uppercase lh-1 m-0">Veterinaria</p>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav text-ul ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html" title="inicio"
+                  >INICIO</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="./institucional.html"
+                  title="institucion"
+                  >INSTITUCION</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./mascotas.html"
+                  title="mascotas"
+                  >MASCOTAS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html" title="contacto"
+                  >CONTACTO</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- GESTION DE MASCOTAS -->
+
+    <main class="admin-section">
+      <div class="container">
+
+        <div class="text-center mb-4">
+          <h1 class="fw-bold">Gestión de Mascotas</h1>
+          <p class="text-secondary">
+            Administrá el registro, edición y listado de las mascotas de la veterinaria.
+          </p>
+        </div>
+
+        <!-- Contenedor para mostrar mensajes o alertas desde JavaScript -->
+        <div id="alertaMascotas" class="mb-3"></div>
+
+        <div class="row g-4">
+          <!-- Columna 1: Formulario -->
+          <div class="col-12 col-lg-4">
+            <div class="card card-custom h-100">
+              <div class="card-header card-header-custom py-3">
+                <h2 class="h5 m-0 fw-semibold" id="formTitulo">Registrar Mascota</h2>
+              </div>
+              <div class="card-body p-4">
+                <form id="formMascota">
+                  <!-- ID oculto para identificar la mascota al editar -->
+                  <input type="hidden" id="idMascota" name="idMascota" />
+
+                  <div class="mb-3">
+                    <label for="nombreMascota" class="form-label">Nombre de la Mascota</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombreMascota"
+                      name="nombreMascota"
+                      placeholder="Ej: Milo"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="nombreDuenio" class="form-label">Nombre del Dueño</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombreDuenio"
+                      name="nombreDuenio"
+                      placeholder="Ej: Laura Gómez"
+                      required
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="colorMascota" class="form-label">Color</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="colorMascota"
+                      name="color"
+                      placeholder="Ej: Marrón"
+                      required
+                    />
+                  </div>
+
+                  <div class="row g-2 mb-4">
+                    <div class="col-6">
+                      <label for="edadMascota" class="form-label">Edad</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="edadMascota"
+                        name="edad"
+                        min="0"
+                        step="1"
+                        placeholder="Años"
+                        required
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label for="pesoMascota" class="form-label">Peso (kg)</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="pesoMascota"
+                        name="peso"
+                        min="0"
+                        step="0.01"
+                        placeholder="Kg"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="d-grid gap-2">
+                    <button
+                      type="submit"
+                      id="btnGuardarMascota"
+                      class="btn btn-primary"
+                    >
+                      Guardar Mascota
+                    </button>
+                    <button
+                      type="button"
+                      id="btnCancelarEdicion"
+                      class="btn btn-outline-secondary d-none"
+                    >
+                      Cancelar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Columna 2: Tabla de Listado -->
+          <div class="col-12 col-lg-8">
+            <div class="card card-custom h-100">
+              <div
+                class="card-header card-header-custom py-3 d-flex justify-content-between align-items-center"
+              >
+                <h2 class="h5 m-0 fw-semibold">Listado de Mascotas</h2>
+                <!-- Contador de registros para el JS -->
+                <p id="contadorMascotas" class="m-0 text-muted">Total de mascotas: 0</p>
+              </div>
+
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table
+                    class="table table-striped table-hover align-middle mb-0 text-center"
+                    id="tablaMascotas"
+                  >
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Dueño</th>
+                        <th>Color</th>
+                        <th>Edad</th>
+                        <th>Peso</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tablaMascotasBody">
+                      <tr>
+                        <td colspan="6" class="py-4 text-muted">
+                          No hay mascotas registradas actualmente.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+
+    <!-- FOOTER  -->
+    <footer>
+      <div
+        class="container-content row row-cols-1 py-4 gap-4 row-cols-lg-3 gap-lg-0"
+      >
+        <section
+          class="footer_ubicacion col d-flex flex-column justify-content-center align-items-center gap-0"
+        >
+          <img
+            class="logo_footer"
+            src="../assets/images/icono_logo.png"
+            alt="Veterinaria la Mary"
+          />
+          <p class="mt-2">Veterinaria la mary</p>
+          <p>Direccion: Calle falsa 123, Ciudad</p>
+        </section>
+
+        <section
+          class="enlaces_rapidos col d-flex flex-column justify-content-center align-items-center gap-2"
+        >
+          <p class="">Enlaces rápidos</p>
+          <ul class="d-flex gap-3">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="./institucional.html">INSTITUCION</a></li>
+            <li><a href="./mascotas.html">MASCOTAS</a></li>
+            <li><a href="./contacto.html">CONTACTO</a></li>
+          </ul>
+        </section>
+
+        <section
+          class="redes_sociales col d-flex flex-column justify-content-center align-items-center gap-2"
+        >
+          <p>Nuestras Redes Sociales</p>
+          <ul class="d-flex gap-3">
+            <li><img src="../assets/images/whatsapp.png" alt="WhatsApp" /></li>
+            <li>
+              <img src="../assets/images/instagram.png" alt="Instagram" />
+            </li>
+            <li><img src="../assets/images/facebook.png" alt="Facebook" /></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="container_copy py-3 text-center">
+        <section>
+          <p>&copy; 2026 Todos los derechos reservados.</p>
+        </section>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de logica para Mascotas -->
+    <script src="../js/mascotas.js" defer></script>
+  </body>
+</html>

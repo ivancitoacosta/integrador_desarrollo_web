@@ -22,6 +22,7 @@ export function getLocalStorage(key) {
 }
 // ==== CODIGO ====
 
+
 // TEST
 const mascotaNueva = {
   id: generarId(),
