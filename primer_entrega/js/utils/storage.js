@@ -3,8 +3,11 @@ function setLocalStorage(key, value) {
 }
 
 function getLocalStorage(key) {
-  console.log(JSON.parse(localStorage.getItem(key)));
+  const data = JSON.parse(localStorage.getItem(key));
+  console.log(data);
+  return data;
 }
+
 
 // TEST
 // setLocalStorage(1, { escuela: "UNNER" });
@@ -12,3 +15,16 @@ function getLocalStorage(key) {
 
 // getLocalStorage(2);
 // getLocalStorage(1);
+
+// // TEST: Mascotas de prueba
+// setLocalStorage("mascotas", [
+//   {
+//     id: "1",
+//     nombreMascota: "Milo",
+//     nombreDuenio: "Laura Gómez",
+//     color: "Marrón",
+//     edad: 3,
+//     peso: 8.5
+//   }
+// ]);
+// getLocalStorage("mascotas, 2");
