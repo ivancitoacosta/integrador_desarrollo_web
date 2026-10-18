@@ -1,30 +1,89 @@
-function setLocalStorage(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
+// TEST
+import { generarId } from "./helpers.js";
+
+// ==== CODIGO ====
+
+/**
+ *
+ * @param {*} key  - key del localStorage
+ * @param {*} arr  - arreglo con los datos
+ */
+export function setLocalStorage(key, arr) {
+  localStorage.setItem(key, JSON.stringify(arr));
 }
 
-function getLocalStorage(key) {
+/**
+ *
+ * @param {*} key  - key del localStorage
+ */
+export function getLocalStorage(key) {
   const data = JSON.parse(localStorage.getItem(key));
-  console.log(data);
   return data;
 }
+// ==== CODIGO ====
 
 
 // TEST
-// setLocalStorage(1, { escuela: "UNNER" });
-// setLocalStorage(2, { edad: 22, nombre: "Marcelo", trabajo: "Programador" });
+const mascotaNueva = {
+  id: generarId(),
+  duenio: "Messi",
+  nombre: "Perro1",
+  color: "Negro",
+  edad: 2,
+  peso: 30,
+};
+const mascotaNueva2 = {
+  id: generarId(),
+  duenio: "Scaloni",
+  nombre: "Perro2",
+  color: "Blanco",
+  edad: 2,
+  peso: 30,
+};
 
-// getLocalStorage(2);
-// getLocalStorage(1);
+const veterinarioNueva = {
+  id: generarId(),
+  duenio: "Aimar",
+  nombre: "Veterinario1",
+  color: "Negro",
+  edad: 2,
+  peso: 30,
+};
+const veterinarioNueva2 = {
+  id: generarId(),
+  duenio: "Samuel",
+  nombre: "Veterinario2",
+  color: "Blanco",
+  edad: 2,
+  peso: 30,
+};
+// CASO DE USO
 
-// // TEST: Mascotas de prueba
-// setLocalStorage("mascotas", [
-//   {
-//     id: "1",
-//     nombreMascota: "Milo",
-//     nombreDuenio: "Laura Gómez",
-//     color: "Marrón",
-//     edad: 3,
-//     peso: 8.5
-//   }
-// ]);
-// getLocalStorage("mascotas, 2");
+// mascotas.js
+const arrMascotas = [];
+arrMascotas.push(mascotaNueva);
+arrMascotas.push(mascotaNueva2);
+
+const dataMascotas = getLocalStorage("mascotas");
+
+setLocalStorage("mascotas", arrMascotas);
+
+console.log(dataMascotas);
+dataMascotas.forEach((e) => {
+  console.log({ data: e });
+});
+
+// Veterinarios.js
+
+const arrVeterinarios = [];
+arrVeterinarios.push(veterinarioNueva);
+arrVeterinarios.push(veterinarioNueva2);
+
+const dataVeterinarios = getLocalStorage("veterinarios");
+setLocalStorage("veterinarios", arrVeterinarios);
+
+console.log(dataVeterinarios);
+dataVeterinarios.forEach((e) => {
+  console.log({ data: e });
+});
+//TEST
