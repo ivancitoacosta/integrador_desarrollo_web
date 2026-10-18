@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/veterinarios.css" />
+    <title>Gestión de Veterinarios - La Mary</title>
+</head>
+<body>
+    <!-- HEADER BOOTSTRAP -->
+    <header class="container-content position-fixed top-0 start-0 end-0">
+    <nav
+        class="navbar navbar-expand-lg rounded-5 mt-3 py-2 px-1 py-md-3 px-md-4"
+    >
+        <div class="container-fluid">
+        <a
+            href="../index.html"
+            class="nav_header d-flex align-items-center gap-2"
+        >
+            <img
+            src="../assets/images/icono_logo.png"
+            alt="Logo de Veterinaria la Mary"
+            />
+            <div
+            class="text-logo d-flex flex-column justify-content-center gap-1"
+            >
+            <h1 class="fw-medium lh-1 m-0">LA MARY</h1>
+            <p class="fw-normal text-uppercase lh-1 m-0">Veterinaria</p>
+            </div>
+        </a>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav text-ul ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html" title="inicio"
+                >INICIO</a
+                >
+            </li>
+            <li class="nav-item">
+                <a
+                class="nav-link"
+                href="./institucional.html"
+                title="institucion"
+                >INSTITUCION</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./mascotas.html" title="mascotas"
+                >MASCOTAS</a
+                >
+            </li>
+            <li class="nav-item">
+                <a
+                class="nav-link active"
+                aria-current="page"
+                href="./veterinarios.html"
+                title="veterinarios"
+                >VETERINARIOS</a
+                >
+            </li>
+            <li class="nav-item">
+                <a
+                class="nav-link"
+                href="./contacto.html"
+                title="contacto"
+                >CONTACTO</a
+                >
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL: GESTIÓN DE VETERINARIOS -->
+    <main class="gestion-veterinarios">
+    <section class="container py-4">
+        <h2 class="text-center mb-4 titulo-seccion">ADMINISTRACIÓN DE VETERINARIOS</h2>
+
+        <div class="row g-4 align-items-start">
+        <!-- COLUMNA 1: FORMULARIO -->
+        <div class="col-12 col-lg-4">
+            <section class="card card-custom p-4">
+            <h3 class="fs-5 fw-bold mb-3 text-uppercase" id="form-titulo">
+                Registrar Veterinario
+            </h3>
+
+            <form id="form-veterinario" novalidate>
+                <!-- campo oculto para almacenar el ID durante la edición -->
+                <input type="hidden" id="idVeterinario" />
+
+                <div class="mb-3">
+                <label for="matricula" class="form-label">Matrícula</label>
+                <input
+                    type="number"
+                    id="matricula"
+                    class="form-control"
+                    placeholder="Ej: 12345"
+                    required
+                />
+                </div>
+
+                <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    class="form-control"
+                    placeholder="Ej: Dra. Rosario Yamal"
+                    required
+                />
+                </div>
+
+                <div class="mb-3">
+                <label for="especializacion" class="form-label">Especialización</label>
+                <input
+                    type="text"
+                    id="especializacion"
+                    class="form-control"
+                    placeholder="Ej: Cirugía Veterinaria"
+                    required
+                />
+                </div>
+
+                <div class="mb-3">
+                <label for="valorConsulta" class="form-label">Valor de Consulta ($)</label>
+                <input
+                    type="number"
+                    step="0.01"
+                    id="valorConsulta"
+                    class="form-control"
+                    placeholder="Ej: 15000"
+                    required
+                />
+                </div>
+
+                <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary-custom flex-fill" id="btn-guardar">
+                    Guardar
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-secondary-custom d-none"
+                    id="btn-cancelar"
+                >
+                    Cancelar
+                </button>
+                </div>
+            </form>
+            </section>
+        </div>
+
+        <!-- COLUMNA 2: TABLA DE LISTADO -->
+        <div class="col-12 col-lg-8">
+            <section class="card card-custom p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 class="fs-5 fw-bold text-uppercase m-0">Listado de Profesionales</h3>
+                <span class="badge bg-secondary-custom fs-6" id="total-registros">
+                Total: 0
+                </span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle m-0">
+                <thead class="table-dark-custom">
+                    <tr>
+                    <th>Matrícula</th>
+                    <th>Nombre</th>
+                    <th>Especialización</th>
+                    <th>Valor Consulta</th>
+                    <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-veterinarios">
+                    <!-- Se completa dinámicamente desde veterinarios.js -->
+                </tbody>
+                </table>
+            </div>
+            </section>
+        </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+    <div
+        class="container-content row row-cols-1 py-4 gap-4 row-cols-lg-3 gap-lg-0"
+    >
+        <section
+        class="footer_ubicacion col d-flex flex-column justify-content-center align-items-center gap-0"
+        >
+        <img
+            class="logo_footer"
+            src="../assets/images/icono_logo.png"
+            alt="Veterinaria la Mary"
+        />
+        <p class="mt-2">Veterinaria la mary</p>
+        <p>Direccion: Calle falsa 123, Ciudad</p>
+        </section>
+
+        <section
+        class="enlaces_rapidos col d-flex flex-column justify-content-center align-items-center gap-2"
+        >
+        <p class="">Enlaces rápidos</p>
+        <ul class="d-flex gap-3">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="./institucional.html">INSTITUCION</a></li>
+            <li><a href="./mascotas.html">MASCOTAS</a></li>
+            <li><a href="./veterinarios.html">VETERINARIOS</a></li>
+            <li><a href="./contacto.html">CONTACTO</a></li>
+        </ul>
+        </section>
+
+        <section
+        class="redes_sociales col d-flex flex-column justify-content-center align-items-center gap-2"
+        >
+        <p>Nuestras Redes Sociales</p>
+        <ul class="d-flex gap-3">
+            <li><img src="../assets/images/whatsapp.png" alt="WhatsApp" /></li>
+            <li>
+            <img src="../assets/images/instagram.png" alt="Instagram" />
+            </li>
+            <li><img src="../assets/images/facebook.png" alt="Facebook" /></li>
+        </ul>
+        </section>
+    </div>
+
+    <div class="container_copy py-3 text-center">
+        <section>
+        <p>&copy; 2026 Todos los derechos reservados.</p>
+        </section>
+    </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- El script JS lo agregará un compañero del grupo  -->
+    <!-- <script src="../js/veterinarios.js"></script> -->
+</body>
+</html>
+
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
