@@ -53,7 +53,7 @@ const formVeterinario = document.getElementById('form-veterinario');
     // al cargar la pag dispare la lista
     listarVeterinarios()
 
-// Acciones para editar y eliminar veterinarios Revisar esto ->>>
+// Acciones para editar y eliminar veterinarios junto a los botones adicionales de la tabla
 
 const campoIdVeterinario = document.getElementById("idVeterinario");
 const tituloFormularioVeterinario = document.getElementById("form-titulo");
