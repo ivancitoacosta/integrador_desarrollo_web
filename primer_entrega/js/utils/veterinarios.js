@@ -1,10 +1,7 @@
 import { getLocalStorage, setLocalStorage } from "./storage.js";
-import { generarId } from "./helpers.js";
+import { generarId, formateoMoneda } from "./helpers.js";
 
-const formatoMoneda = new Intl.NumberFormat("es-AR", {
-    style: "currency",
-    currency: "ARS",
-});
+const formatoMoneda = formateoMoneda();
 
     // forreach para mostrar y find para buscar y editar
 
@@ -45,7 +42,7 @@ const formVeterinario = document.getElementById('form-veterinario');
             matricula: Number(document.getElementById("matricula").value),
             nombre: document.getElementById("nombre").value,
             especializacion: document.getElementById("especializacion").value,
-            valorConsulta: Number(document.getElementById("valorConsulta").value),  
+            valorConsulta: Number(document.getElementById("valorConsulta").value),
             };
         agregarVeterinario(veterinario);
         listarVeterinarios()
