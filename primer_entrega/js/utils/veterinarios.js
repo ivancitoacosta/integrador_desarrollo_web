@@ -1,3 +1,5 @@
+import { getLocalStorage, setLocalStorage } from "./storage.js";
+
 // Función para buscar un veterinario por su ID y actualizar sus datos
 function mostrarVeterinarios(veterinarios) {
 
@@ -12,6 +14,7 @@ function mostrarVeterinarios(veterinarios) {
     }
 setLocalStorage('veterinarios', getVeterinarios());
 });
+}
 
 // obtengo la lista de veterinarios del localStorage ya comprobada
 function getVeterinarios() {
@@ -20,9 +23,9 @@ function getVeterinarios() {
         };
 
 function agregarVeterinario(veterinario){
-    const listaVeterinarios = getLocalStorage('veterinarios');
+    const listaVeterinarios = getVeterinarios();
     listaVeterinarios.push(veterinario);
     setLocalStorage('veterinarios', listaVeterinarios);
 }
-}
+
 
