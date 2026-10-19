@@ -1,5 +1,4 @@
-// TEST
-import { generarId } from "./helpers.js";
+// import { generarId } from "./helpers.js";
 
 // ==== CODIGO ====
 
@@ -23,7 +22,7 @@ export function getLocalStorage(key) {
 // ==== CODIGO ====
 
 
-// TEST
+/* TEST
 const mascotaNueva = {
   id: generarId(),
   duenio: "Messi",
@@ -43,19 +42,17 @@ const mascotaNueva2 = {
 
 const veterinarioNueva = {
   id: generarId(),
-  duenio: "Aimar",
-  nombre: "Veterinario1",
-  color: "Negro",
-  edad: 2,
-  peso: 30,
+  matricula: 12345,
+  nombre: "Veterinaria de prueba",
+  especializacion: "Clínica",
+  valorConsulta: 15000,
 };
 const veterinarioNueva2 = {
   id: generarId(),
-  duenio: "Samuel",
-  nombre: "Veterinario2",
-  color: "Blanco",
-  edad: 2,
-  peso: 30,
+  matricula: 67890,
+  nombre: "Veterinario de prueba",
+  especializacion: "Cirugía",
+  valorConsulta: 20000,
 };
 // CASO DE USO
 
@@ -86,4 +83,4 @@ console.log(dataVeterinarios);
 dataVeterinarios.forEach((e) => {
   console.log({ data: e });
 });
-//TEST
+TEST */
