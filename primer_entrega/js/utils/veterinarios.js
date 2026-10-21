@@ -40,8 +40,8 @@ const formVeterinario = document.getElementById('form-veterinario');
         const veterinario = {
             id: generarId(),
             matricula: Number(document.getElementById("matricula").value),
-            nombre: document.getElementById("nombre").value,
-            especializacion: document.getElementById("especializacion").value,
+            nombre: document.getElementById("nombre").value.trim(),
+            especializacion: document.getElementById("especializacion").value.trim(),
             valorConsulta: Number(document.getElementById("valorConsulta").value),
             };
         agregarVeterinario(veterinario);
