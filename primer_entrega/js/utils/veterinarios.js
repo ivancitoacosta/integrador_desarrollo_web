@@ -3,17 +3,17 @@ import { generarId, formateoMoneda } from "./helpers.js";
 
 const formatoMoneda = formateoMoneda();
 
-    // forreach para mostrar y find para buscar y editar
+// forreach para mostrar y find para buscar y editar
 
 
 // obtengo la lista de veterinarios del localStorage ya comprobada
 function getVeterinarios() {
-     const listaVeterinarios = getLocalStorage('veterinarios')
-     return Array.isArray(listaVeterinarios) ? listaVeterinarios : [];
-        };
+    const listaVeterinarios = getLocalStorage('veterinarios')
+    return Array.isArray(listaVeterinarios) ? listaVeterinarios : [];
+};
 
 
-function agregarVeterinario(veterinario){
+function agregarVeterinario(veterinario) {
     const listaVeterinarios = getVeterinarios();
     listaVeterinarios.push(veterinario);
     setLocalStorage('veterinarios', listaVeterinarios);
@@ -31,27 +31,27 @@ function listarVeterinarios() {
         row.insertCell(3).textContent = formatoMoneda.format(veterinario.valorConsulta);
     });
 
-    }
+}
 // eventos disparados por el formulario de veterinarios
 
 const formVeterinario = document.getElementById('form-veterinario');
-    formVeterinario.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const veterinario = {
-            id: generarId(),
-            matricula: Number(document.getElementById("matricula").value),
-            nombre: document.getElementById("nombre").value.trim(),
-            especializacion: document.getElementById("especializacion").value.trim(),
-            valorConsulta: Number(document.getElementById("valorConsulta").value),
-            };
-        agregarVeterinario(veterinario);
-        listarVeterinarios()
-        formVeterinario.reset();
-        alert('Veterinario agregado correctamente');
-    });
-
-    // al cargar la pag dispare la lista
+formVeterinario.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const veterinario = {
+        idVeterinario: generarId(),
+        matricula: Number(document.getElementById("matricula").value),
+        nombre: document.getElementById("nombre").value.trim(),
+        especializacion: document.getElementById("especializacion").value.trim(),
+        valorConsulta: Number(document.getElementById("valorConsulta").value),
+    };
+    agregarVeterinario(veterinario);
     listarVeterinarios()
+    formVeterinario.reset();
+    alert('Veterinario agregado correctamente');
+});
+
+// al cargar la pag dispare la lista
+listarVeterinarios()
 
 // Acciones para editar y eliminar veterinarios junto a los botones adicionales de la tabla
 
@@ -97,7 +97,7 @@ function actualizarAccionesYTotal() {
         iconoEditar.append(segundaRutaIconoEditar);
         botonEditar.append(iconoEditar);
         botonEditar.addEventListener("click", () => {
-            campoIdVeterinario.value = veterinario.id;
+            campoIdVeterinario.value = veterinario.idVeterinario;
             document.getElementById("matricula").value = veterinario.matricula;
             document.getElementById("nombre").value = veterinario.nombre;
             document.getElementById("especializacion").value = veterinario.especializacion;
@@ -134,11 +134,11 @@ function actualizarAccionesYTotal() {
             }
 
             const listaActualizada = getVeterinarios().filter(
-                (item) => item.id !== veterinario.id
+                (item) => item.idVeterinario !== veterinario.idVeterinario
             );
             setLocalStorage("veterinarios", listaActualizada);
 
-            if (campoIdVeterinario.value === veterinario.id) {
+            if (campoIdVeterinario.value === veterinario.idVeterinario) {
                 cancelarEdicionDeVeterinario();
             }
 
@@ -167,14 +167,14 @@ formVeterinario.addEventListener("submit", (event) => {
     event.stopImmediatePropagation();
 
     const veterinarioActualizado = {
-        id: campoIdVeterinario.value,
+        idVeterinario: campoIdVeterinario.value,
         matricula: Number(document.getElementById("matricula").value),
         nombre: document.getElementById("nombre").value.trim(),
         especializacion: document.getElementById("especializacion").value.trim(),
         valorConsulta: Number(document.getElementById("valorConsulta").value),
     };
     const listaActualizada = getVeterinarios().map((veterinario) =>
-        veterinario.id === veterinarioActualizado.id
+        veterinario.idVeterinario === veterinarioActualizado.idVeterinario
             ? veterinarioActualizado
             : veterinario
     );
