@@ -18,26 +18,25 @@
   <body>
     <main>
       <section
-        class="container-login d-flex justify-content-center align-items-center"
+        class="container-login d-flex justify-content-center align-items-center p-4"
       >
         <!-- Animacion de login -->
         <div class="animation-login-01"></div>
         <div class="animation-login-02"></div>
 
         <!-- Contenedor de login principal -->
-        <div>
+        <div class="container-form">
           <h2 class="text-center">INGRESAR</h2>
 
-          <form class="form-control">
+          <form class="form-control p-4" id="formLogin">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-
+              <label for="emailUser" class="form-label">Email</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                name="email"
                 aria-describedby="emailHelp"
-                placeholder="tumail@..."
+                placeholder="tuEmail@gmail.com"
               />
             </div>
             <div class="mb-3">
@@ -45,11 +44,11 @@
               <input
                 type="password"
                 class="form-control"
-                id="passwordUser"
+                name="password"
                 placeholder="Ingresa tu contraseña"
               />
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn boton-form">Enviar</button>
           </form>
         </div>
       </section>
