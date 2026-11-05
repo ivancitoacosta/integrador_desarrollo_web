@@ -15,13 +15,11 @@ export function getLocalStorage(key) {
 }
 
 
-export function setTokenSessionStorage(accessToken, refreshToken) {
+export function setTokenSessionStorage(accessToken) {
   sessionStorage.setItem('accessToken', accessToken);
-  sessionStorage.setItem('refreshToken', refreshToken);
 }
 
 export function getTokenSessionStorage() {
   const accessToken = sessionStorage.getItem('accessToken');
-  const refreshToken = sessionStorage.getItem('refreshToken');
-  return { accessToken, refreshToken };
+  return { accessToken };
 }
