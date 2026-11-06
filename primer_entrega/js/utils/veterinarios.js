@@ -1,5 +1,9 @@
 import { getLocalStorage, setLocalStorage } from "./storage.js";
 import { generarId, formateoMoneda } from "./helpers.js";
+import { protegerPagina } from "./auth.js";
+
+// Si no hay sesión iniciada redirige al login
+protegerPagina("./login.html");
 
 const formatoMoneda = formateoMoneda();
 

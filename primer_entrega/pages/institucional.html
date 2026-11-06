@@ -64,12 +64,12 @@
                   >INSTITUCION</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item nav-admin d-none">
                 <a class="nav-link" href="./mascotas.html" title="mascotas"
                   >MASCOTAS</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item nav-admin d-none">
                 <a
                   class="nav-link"
                   href="./veterinarios.html"
@@ -77,12 +77,36 @@
                   >VETERINARIOS</a
                 >
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#" title="servicio">SERVICIOS</a>
-              </li> -->
+              <li class="nav-item nav-admin d-none">
+                <a class="nav-link" href="./turnos.html" title="turnos"
+                  >TURNOS</a
+                >
+              </li>
+              <li class="nav-item nav-admin d-none">
+                <a
+                  class="nav-link"
+                  href="./historia-clinica.html"
+                  title="historia clinica"
+                  >HISTORIA CLÍNICA</a
+                >
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="./contacto.html" title="contacto"
                   >CONTACTO</a
+                >
+              </li>
+              <li class="nav-item nav-visitante">
+                <a class="nav-link" href="./login.html" title="ingresar"
+                  >INGRESAR</a
+                >
+              </li>
+              <li class="nav-item nav-sesion-activa d-none">
+                <a
+                  class="nav-link text-danger"
+                  href="#"
+                  id="btnCerrarSesion"
+                  title="cerrar sesion"
+                  >CERRAR SESIÓN</a
                 >
               </li>
             </ul>
@@ -287,5 +311,8 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar dinámica -->
+    <script type="module" src="../js/utils/navbar.js"></script>
   </body>
 </html>
