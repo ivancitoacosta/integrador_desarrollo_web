@@ -51,12 +51,3 @@ async function login(data) {
 
   return
 }
-
-// Función para cerrar sesión
-function logOut() {
-  sessionStorage.clear();
-
-  window.location.href = './login.html';
-
-  return
-}
