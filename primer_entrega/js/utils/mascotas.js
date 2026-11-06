@@ -2,6 +2,10 @@
 // BREAD de mascotas con LocalStorage (clave: "mascotas")
 import { generarId } from "./helpers.js";
 import { getLocalStorage, setLocalStorage } from "./storage.js";
+import { protegerPagina } from "./auth.js";
+
+// Si no hay sesion iniciada redirige al login
+protegerPagina("./login.html");
 
 const CLAVE = "mascotas";
 

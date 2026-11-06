@@ -1,5 +1,11 @@
-import { setTokenSessionStorage } from "./storage";
-import { fetchLogin } from "./api";
+import { setTokenSessionStorage } from "./storage.js";
+import { fetchLogin } from "./api.js";
+import { haySesion } from "./auth.js";
+
+// Si el usuario ya está autenticado no necesita volver a loguearse
+if (haySesion()) {
+  window.location.href = "./mascotas.html";
+}
 
 const form = document.getElementById("formLogin");
 const errorMessage = document.getElementById("errorMessage");
