@@ -1,12 +1,12 @@
 import { haySesion, cerrarSesion } from "./auth.js";
 
-// Ajusta la visibilidad de los elementos del menú según si el usuario inicio sesion o no
+// Ajusta la visibilidad de los elementos del menu 
 export function configurarNavbar() {
   const sesionIniciada = haySesion();
 
   // Detectamos si la página esta dentro de la carpeta /pages/ o en la raíz
   const estaEnPages = window.location.pathname.includes("/pages/");
-  const rutaLogin = estaEnPages ? "./login.html" : "./pages/login.html";
+  const rutaHome = estaEnPages ? "../index.html" : "./index.html";
 
   // Obtenemos los elementos del menu 
   const itemsAdmin = document.querySelectorAll(".nav-admin");
@@ -30,11 +30,10 @@ export function configurarNavbar() {
   if (btnCerrarSesion) {
     btnCerrarSesion.addEventListener("click", (e) => {
       e.preventDefault();
-      cerrarSesion(rutaLogin);
+      cerrarSesion(rutaHome);
     });
   }
 }
 
-// Ejecutamos la configuración al cargar el script
 configurarNavbar();
 
