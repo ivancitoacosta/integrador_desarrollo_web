@@ -9,9 +9,17 @@ export function generarId() {
  * Función para formatear moneda a formato ARS
  */
 export function formateoMoneda() {
-  const moneda = new Intl.NumberFormat("es-AR", {
+  const moneda = new Intl.NumberFormat('es-AR', {
     style: 'currency',
     currency: "ARS"
   });
   return moneda
+}
+
+export function formateoFechaHora() {
+  const fechaHora = new Intl.DateTimeFormat('es-AR', {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  });
+  return fechaHora
 }
