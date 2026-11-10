@@ -99,8 +99,49 @@ header nav a img {
   padding-bottom: 2px;
 }
 
-/* @media (max-width: 768px) {
-} */
+/* AJUSTES RESPONSIVOS DEL NAVBAR */
+
+/* Para pantallas de  992px a 1250px */
+@media (min-width: 992px) and (max-width: 1250px) {
+  header nav {
+    padding-inline: 1rem !important;
+  }
+  header nav a img {
+    width: 2.8rem;
+  }
+  .text-logo h1 {
+    font-size: 1.4rem;
+  }
+  .text-logo p {
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+  }
+  .text-ul a {
+    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
+    padding-inline: 0.35rem !important;
+  }
+  .navbar-nav {
+    gap: 0.1rem;
+  }
+}
+
+/* En pantallas donde el navbar colapsa (< 992px)  */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(--color-primary);
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+  }
+  .text-ul li {
+    padding-block: 0.35rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .text-ul li:last-child {
+    border-bottom: none;
+  }
+}
 
 /*FOOTER*/
 footer {

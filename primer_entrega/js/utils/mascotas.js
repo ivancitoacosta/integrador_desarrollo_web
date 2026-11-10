@@ -175,7 +175,7 @@ function eliminarMascota(id) {
     mostrarAlerta("Mascota eliminada.", "info");
 
     // Si justo estaba editando esa mascota, limpiar el formulario
-    if (Number(idMascota.value) === id) {
+    if (idMascota.value === id) {
       limpiarFormulario();
     }
   }

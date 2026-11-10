@@ -6,10 +6,10 @@ export function haySesion() {
   return Boolean(accessToken);
 }
 
-// Cierra la sesion activa eliminando el token de acceso
-export function cerrarSesion(rutaLogin = "./login.html") {
+// Cierra la sesion, eliminando el token  y redirige al home
+export function cerrarSesion(rutaHome = "./index.html") {
   sessionStorage.removeItem("accessToken");
-  window.location.href = rutaLogin;
+  window.location.href = rutaHome;
 }
 
 // Protege una página de administración
