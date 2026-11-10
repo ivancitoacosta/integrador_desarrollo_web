@@ -131,7 +131,7 @@ form.addEventListener("submit", (evento) => {
 
   if (idMascota.value) {
     // Editar: reemplaza los datos de la mascota con ese id
-    const id = Number(idMascota.value);
+    const id = idMascota.value;
     mascotas = mascotas.map((m) => (m.id === id ? { ...m, ...datos } : m));
     mostrarAlerta("Mascota actualizada correctamente.", "success");
   } else {
