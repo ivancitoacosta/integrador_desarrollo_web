@@ -7,6 +7,10 @@
 
 import { getLocalStorage, setLocalStorage } from "./storage.js";
 import { formateoMoneda, formateoFechaHora, generarId } from "./helpers.js";
+import { protegerPagina } from "./auth.js";
+
+// Si no hay sesion iniciada redirige al login
+protegerPagina("./login.html");
 
 const CLAVE_TURNOS = "turnos";
 
@@ -88,14 +92,6 @@ function guardarTurnos() {
 // de mascotas y veterinarios pueden venir como número o como string)
 function buscarPorId(lista, id) {
     return lista.find((item) => String(item.id) === String(id));
-}
-
-// --- Sesión del administrador ---
-function haySesion() {
-    return (
-        sessionStorage.getItem(CLAVE_SESION) !== null ||
-        localStorage.getItem(CLAVE_SESION) !== null
-    );
 }
 
 // --- Mensajes (alertas de Bootstrap) ---
@@ -420,10 +416,4 @@ function iniciar() {
     formVeterinarioRapido.addEventListener("submit", registrarVeterinarioRapido);
 }
 
-// Solo un administrador con sesión puede gestionar los turnos
-if (haySesion()) {
-    iniciar();
-} else {
-    avisoSesion.classList.remove("d-none");
-    panelTurnos.classList.add("d-none");
-}
+iniciar();
